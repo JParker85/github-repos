@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>github repos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="styles/main.css">
+
+        <script src="bower_components/modernizr/modernizr.js"></script>
+
+    </head>
+    <body>
+
+    <div class="left"></div>
+    <span></span>
+
+
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="scripts/main.js"></script>
+
+        <script type="text/template" id="profile">
+        <h1><%= login %></h1>
+        <img src="<%= avatar_url %>">
+        </script>
+
+        <!-- // <script type="text/template" id="repos">
+        <h1><%= name %></h1>
+        </script> -->
+
+        <script>
+        var profileTpl = $('#profile').html();
+        $(".left").append(_.template(profileTpl, user));
+        </script>
+
+        <script>
+        var compiled = _.template(
+          "<div class='right'>" +
+            "<h2><%= name %></h2>" +
+          "</div>"
+        );
+
+        var i ="";
+        var toAppendString ="";
+        // var repoTpl = _.each(repos,function(random){
+          for(i=0; i<repos.name.length; i++){
+            toAppendString += compiled (repos.name[i]);
+          }
+        $(".right").append(toAppendString);
+        </script>
+
+        <!-- // <script>
+        // $(".right").append
+        // repoTpl = $('#repos').html();
+        // $(".right").append(_.template(repoTpl, repos));
+        //
+        // </script> -->
+
+</body>
+</html>
