@@ -19,7 +19,7 @@ var user = {
   "public_repos": 5,
   "public_gists": 0,
   "followers": 3,
-  "following": 0,
+  "following": 6,
   "created_at": "2014-04-10T03:23:23Z",
   "updated_at": "2014-06-19T05:11:10Z"
 };
