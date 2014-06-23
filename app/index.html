@@ -34,7 +34,14 @@
         </script>
 
         <script type="text/template" id="repos">
-        
+         <ul>
+         <% for (var i = 0; i < repo.length; i++) { %>
+         <% var repo = repo[i]; %>
+         <li>
+          <em><%= repos.name %></em> by <%= repos.starred_url %>
+         </li>
+        <% } %>
+      </ul>
         <h1><%= name %></h1>
         </script>
 
